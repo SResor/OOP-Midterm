@@ -48,13 +48,27 @@ char* person::getLastName()
 	return lastName;
 }
 
-// Operator overload for the assignment operator
-person& person::operator=(person const& x)
+// Copy constructor for the person class
+person::person (const person& x)
 {
 	firstName = new char[sizeof x.firstName];
 	strcpy(firstName, x.firstName);
 	lastName = new char[sizeof x.lastName];
 	strcpy(lastName, x.lastName);
+}
 
+// Operator overload for the assignment operator
+person& person::operator=(person const& x)
+{
+	if (this != &x)
+	{
+		delete[] firstName;
+		delete[] lastName;
+	
+		firstName = new char[sizeof x.firstName];
+		strcpy(firstName, x.firstName);
+		lastName = new char[sizeof x.lastName];
+		strcpy(lastName, x.lastName);
+	}
 	return *this;
 }
