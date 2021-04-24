@@ -34,6 +34,9 @@ public:
 	// Getter for the last name		
 	char* getLastName();
 
+	// Copy constructor for the person class
+	person (const person& x);
+	
 	// Operator overload for the assignment operator
 	person& operator=(person const& x);
 };
