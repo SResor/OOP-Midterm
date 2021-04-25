@@ -15,6 +15,8 @@ class person
 private:
 	char* firstName;
 	char* lastName;
+	int firstLength;
+	int lastLength;
 
 public:
 	person();
@@ -33,6 +35,9 @@ public:
 
 	// Getter for the last name		
 	char* getLastName();
+
+	// Copy constructor
+	person(const person& x);
 
 	// Operator overload for the assignment operator
 	person& operator=(person const& x);
