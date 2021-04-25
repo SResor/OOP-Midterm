@@ -16,6 +16,8 @@ using namespace std;
 class badDude : virtual public gunslinger, public pokerPlayer 
 {
 public:
+    badDude();
+
     // Constructor for BadDude class
     badDude(const char* firstName, const char* lastName, double draw, int notches);
 
