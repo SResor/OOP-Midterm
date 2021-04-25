@@ -18,6 +18,9 @@ private:
     double notches;     // Variable for the number of notches on the Gunslinger's gun
 
 public:
+
+    gunslinger();
+
     // Constructor for the Person class
     gunslinger(const char* firstName, const char* lastName, double draw, int notches);
 
